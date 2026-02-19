@@ -851,6 +851,13 @@ setInterval(() => {
             }
             ref.innerText = '🌱'
         }
+        localStorage.setItem("xp", `${xp}`)
+        localStorage.setItem("level", `${level}`)
+        localStorage.setItem("playtime", `${playtime}`)
+        localStorage.setItem("board", JSON.stringify(board))
+        localStorage.setItem("inventory", JSON.stringify(inventory))
+        localStorage.setItem("itemInventory", JSON.stringify(itemInventory))
+        localStorage.setItem("tutorial", `${tutorialStage}`)
     }
 }, 1000)
 
@@ -861,14 +868,7 @@ window.addEventListener("contextmenu", (event) => {
 })
 
 window.addEventListener("beforeunload", () => {
-    localStorage.setItem("xp", `${xp}`)
-    localStorage.setItem("level", `${level}`)
-    localStorage.setItem("playtime", `${playtime}`)
-    localStorage.setItem("board", JSON.stringify(board))
-    localStorage.setItem("inventory", JSON.stringify(inventory))
-    localStorage.setItem("itemInventory", JSON.stringify(itemInventory))
-    localStorage.setItem("tutorial", `${tutorialStage}`)
-    localStorage.setItem("lastQuitOut", Date.now() / 1000)
+    
 })
 
 // 💐💮🏵️🌼🌵🥝🫒🥥🧄🧅 🪴
