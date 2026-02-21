@@ -207,10 +207,10 @@ function nextPlant() {
         return;
     }
     selectedPlant++;
-    selectedPlant = selectedPlant % 35;
+    selectedPlant = selectedPlant % 43;
     while(!(inventory[getPlantByID(selectedPlant)] >= 0)) {
         selectedPlant++;
-        selectedPlant = selectedPlant % 35;
+        selectedPlant = selectedPlant % 43;
     }
     showInventory()
 }
@@ -228,10 +228,10 @@ function prevPlant() {
         return;
     }
     selectedPlant--;
-    if(selectedPlant < 0) selectedPlant = 35
+    if(selectedPlant < 0) selectedPlant = 43
     while(!(inventory[getPlantByID(selectedPlant)] >= 0)) {
         selectedPlant--;
-        if(selectedPlant < 0) selectedPlant = 35
+        if(selectedPlant < 0) selectedPlant = 43
     }
     showInventory()
 }
@@ -391,10 +391,8 @@ function getItemByID(id) {
     }
 }
 
-setInterval(() => {
-    playtime++
-    playtimedisplay.innerText = `Playtime: ${Math.floor(playtime / 3600).toString().padStart(2, "0")}:${Math.floor((playtime % 3600) / 60).toString().padStart(2, "0")}:${(playtime % 60).toString().padStart(2, "0")}`
-    
+function tick() {
+        
     const tile = board[Math.floor(Math.random() * 10)][Math.floor(Math.random() * 10)]
     const x = tile.x
     const y = tile.y
@@ -499,7 +497,7 @@ setInterval(() => {
                 multiplier: 2.5
             }
             ref.innerText = '🌱'
-        } else if(adjacentPlants['🌿'] == 8 && Math.random() < 0.002) {
+        } else if(adjacentPlants['🌿'] == 8 && Math.random() < 0.01) {
             board[y][x].plant = {
                 type: '🍀',
                 stage: 0,
@@ -508,7 +506,7 @@ setInterval(() => {
                 multiplier: 10
             }
             ref.innerText = '🌱'
-        } else if(adjacentPlants['🌿'] == 8 && Math.random() < 0.499) {
+        } else if(adjacentPlants['🌿'] == 8 && Math.random() < 0.495) {
             board[y][x].plant = {
                 type: '☘️',
                 stage: 0,
@@ -851,14 +849,28 @@ setInterval(() => {
             }
             ref.innerText = '🌱'
         }
-        localStorage.setItem("xp", `${xp}`)
-        localStorage.setItem("level", `${level}`)
-        localStorage.setItem("playtime", `${playtime}`)
-        localStorage.setItem("board", JSON.stringify(board))
-        localStorage.setItem("inventory", JSON.stringify(inventory))
-        localStorage.setItem("itemInventory", JSON.stringify(itemInventory))
-        localStorage.setItem("tutorial", `${tutorialStage}`)
     }
+}
+
+setInterval(() => {
+
+    playtime++
+    playtimedisplay.innerText = `Playtime: ${Math.floor(playtime / 3600).toString().padStart(2, "0")}:${Math.floor((playtime % 3600) / 60).toString().padStart(2, "0")}:${(playtime % 60).toString().padStart(2, "0")}`
+    let amount = Number.parseInt(localStorage.getItem("lastTime") ?? Math.floor(Date.now() / 1000) - 1) - Math.floor(Date.now() / 1000)
+    amount *= -1
+    amount = Math.max(amount, 1)
+    for(let i = 0; i < Math.min(amount, 3600); i++) {
+        tick()
+    }
+
+    localStorage.setItem("xp", `${xp}`)
+    localStorage.setItem("level", `${level}`)
+    localStorage.setItem("playtime", `${playtime}`)
+    localStorage.setItem("board", JSON.stringify(board))
+    localStorage.setItem("inventory", JSON.stringify(inventory))
+    localStorage.setItem("itemInventory", JSON.stringify(itemInventory))
+    localStorage.setItem("tutorial", `${tutorialStage}`)
+    localStorage.setItem("lastTime", Math.floor(Date.now() / 1000))
 }, 1000)
 
 showInventory()
@@ -867,9 +879,13 @@ window.addEventListener("contextmenu", (event) => {
     event.preventDefault()
 })
 
-window.addEventListener("beforeunload", () => {
-    
-})
+let amount = Number.parseInt(localStorage.getItem("lastTime") ?? Math.floor(Date.now() / 1000) - 1) - Math.floor(Date.now() / 1000)
+amount *= -1
+amount = Math.max(amount, 1)
+for(let i = 0; i < Math.min(amount, 3600); i++) {
+    tick()
+}
+localStorage.setItem("lastTime", Math.floor(Date.now() / 1000))
 
 // 💐💮🏵️🌼🌵🥝🫒🥥🧄🧅 🪴
 // 
