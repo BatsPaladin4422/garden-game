@@ -849,6 +849,94 @@ function tick() {
             }
             ref.innerText = '🌱'
         }
+
+        if(level < 20) return;
+
+        for(let x1 = x - 2; x1 <= x + 2; x1++) {
+            for(let y1 = y - 2; y1 <= y + 2; y1++) {
+                if(x == x1 && y == y1) continue;
+                if(!board[y1]) continue;
+                if(!board[y1][x1]) continue;
+                if(!board[y1][x1].plant) continue;
+                if(Math.abs(x1 - x) <= 1 && Math.abs(y1 - y) <= 1) continue;
+                if(Math.abs(x1 - x) == 2 && Math.abs(y1 - y) == 2) continue;
+                totalPlants++
+                if(board[y1][x1].plant.stage >= board[y1][x1].plant.maxStage) {
+                    if(adjacentPlants[board[y1][x1].plant.type]) {
+                        adjacentPlants[board[y1][x1].plant.type]++
+                    } else adjacentPlants[board[y1][x1].plant.type] = 1
+                } else {
+                    if(adjacentPlants.sprout) {
+                        adjacentPlants.sprout++
+                    } else adjacentPlants.sprout = 1
+                }
+            }  
+        }
+
+        if(adjacentPlants.sprout == 20 && Math.random() < 0.01) {
+            board[y][x].plant = {
+                type: '🌵',
+                stage: 0,
+                maxStage: 65,
+                natural: true,
+                multiplier: 5
+            }
+            ref.innerText = '🌱'
+        } else if(adjacentPlants['🌴'] >= 12 && adjacentPlants['🍈'] >= 8 && Math.random() < 0.01) {
+            board[y][x].plant = {
+                type: '🥥',
+                stage: 0,
+                maxStage: 65,
+                natural: true,
+                multiplier: 4
+            }
+            ref.innerText = '🌱'
+        } else if(adjacentPlants['🥕'] >= 16 && adjacentPlants['🥥'] >= 4 && Math.random() < 0.01) {
+            board[y][x].plant = {
+                type: '🧄',
+                stage: 0,
+                maxStage: 65,
+                natural: true,
+                multiplier: 4
+            }
+            ref.innerText = '🌱'
+        } else if(adjacentPlants['🧄'] >= 8 && adjacentPlants['🍋'] >= 12 && Math.random() < 0.01) {
+            board[y][x].plant = {
+                type: '🧅',
+                stage: 0,
+                maxStage: 65,
+                natural: true,
+                multiplier: 4
+            }
+            ref.innerText = '🌱'
+        } else if(adjacentPlants['🍋‍🟩'] >= 8 && adjacentPlants['🌵'] >= 8 && adjacentPlants['🥥'] >= 4 && Math.random() < 0.01) {
+            board[y][x].plant = {
+                type: '🥝',
+                stage: 0,
+                maxStage: 65,
+                natural: true,
+                multiplier: 4
+            }
+            ref.innerText = '🌱'
+        } else if(adjacentPlants['🧅'] >= 4 && adjacentPlants['🥝'] >= 12 && adjacentPlants['🍀'] >= 4 && Math.random() < 0.01) {
+            board[y][x].plant = {
+                type: '🫒',
+                stage: 0,
+                maxStage: 65,
+                natural: true,
+                multiplier: 4
+            }
+            ref.innerText = '🌱'
+        } else if(adjacentPlants['🌷'] >= 2 && adjacentPlants['🌹'] >= 2 && adjacentPlants['🌺'] >= 2 && adjacentPlants['🥀'] >= 2 && adjacentPlants['🌸'] >= 2 && adjacentPlants['🪷'] >= 2 && adjacentPlants['🪻'] >= 2 && adjacentPlants['🌻'] >= 2 && Math.random() < 0.01) {
+            board[y][x].plant = {
+                type: '💐',
+                stage: 0,
+                maxStage: 100,
+                natural: true,
+                multiplier: 3
+            }
+            ref.innerText = '🌱'
+        }
     }
 }
 
@@ -887,5 +975,5 @@ for(let i = 0; i < Math.min(amount, 3600); i++) {
 }
 localStorage.setItem("lastTime", Math.floor(Date.now() / 1000))
 
-// 💐💮🏵️🌼🌵🥝🫒🥥🧄🧅 🪴
+// 💮🏵️🌼 🪴
 // 
