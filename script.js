@@ -207,10 +207,10 @@ function nextPlant() {
         return;
     }
     selectedPlant++;
-    selectedPlant = selectedPlant % 43;
+    selectedPlant = selectedPlant % 50;
     while(!(inventory[getPlantByID(selectedPlant)] >= 0)) {
         selectedPlant++;
-        selectedPlant = selectedPlant % 43;
+        selectedPlant = selectedPlant % 50;
     }
     showInventory()
 }
@@ -228,10 +228,10 @@ function prevPlant() {
         return;
     }
     selectedPlant--;
-    if(selectedPlant < 0) selectedPlant = 43
+    if(selectedPlant < 0) selectedPlant = 49
     while(!(inventory[getPlantByID(selectedPlant)] >= 0)) {
         selectedPlant--;
-        if(selectedPlant < 0) selectedPlant = 43
+        if(selectedPlant < 0) selectedPlant = 49
     }
     showInventory()
 }
@@ -376,6 +376,27 @@ function getPlantByID(id) {
         }
         case 42: {
             return '🥕';
+        }
+        case 43: {
+            return '🌵';
+        }
+        case 44: {
+            return '🥥';
+        }
+        case 45: {
+            return '🧄';
+        }
+        case 46: {
+            return '🧅';
+        }
+        case 47: {
+            return '🥝';
+        }
+        case 48: {
+            return '🫒';
+        }
+        case 49: {
+            return '💐';
         }
     }
 }
