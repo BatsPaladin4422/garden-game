@@ -506,7 +506,7 @@ function tick() {
                 stage: 0,
                 maxStage: 5,
                 natural: true,
-                multiplier: 1.5
+                multiplier: 2.5
             }
             ref.innerText = '🌱'
         } else if(adjacentPlants.sprout >= 4 && Math.random() < 0.25) {
@@ -515,7 +515,7 @@ function tick() {
                 stage: 0,
                 maxStage: 3,
                 natural: true,
-                multiplier: 2.5
+                multiplier: 5
             }
             ref.innerText = '🌱'
         } else if(adjacentPlants['🌿'] == 8 && Math.random() < 0.01) {
@@ -533,7 +533,7 @@ function tick() {
                 stage: 0,
                 maxStage: 8,
                 natural: true,
-                multiplier: 1.5
+                multiplier: 2
             }
             ref.innerText = '🌱'
         } else if(adjacentPlants['🥀'] >= 2 && adjacentPlants['🌺'] >= 2 && adjacentPlants['☘️'] >= 2 && Math.random() < 0.2) {
@@ -551,7 +551,7 @@ function tick() {
                 stage: 0,
                 maxStage: 15,
                 natural: true,
-                multiplier: 2
+                multiplier: 3
             }
             ref.innerText = '🌱'
         } else if(adjacentPlants['🌸'] >= 4 && Math.random() < 0.2) {
@@ -569,7 +569,7 @@ function tick() {
                 stage: 0,
                 maxStage: 15,
                 natural: true,
-                multiplier: 2
+                multiplier: 3
             }
             ref.innerText = '🌱'
         } else if(adjacentPlants['🥦'] >= 1 && Math.random() < 0.25) {
@@ -578,7 +578,7 @@ function tick() {
                 stage: 0,
                 maxStage: 15,
                 natural: true,
-                multiplier: 0.5
+                multiplier: 0.8
             }
             ref.innerText = '🌱'
         } else if(adjacentPlants['🌸'] >= 4 && adjacentPlants['🍒'] >= 4 && Math.random() < 0.2) {
@@ -587,7 +587,7 @@ function tick() {
                 stage: 0,
                 maxStage: 15,
                 natural: true,
-                multiplier: 2
+                multiplier: 3
             }
             ref.innerText = '🌱'
         } else if(adjacentPlants['🌿'] >= 3 && adjacentPlants['🥬'] >= 3 && Math.random() < 0.1) {
@@ -596,7 +596,7 @@ function tick() {
                 stage: 0,
                 maxStage: 15,
                 natural: true,
-                multiplier: 1.5
+                multiplier: 2
             }
             ref.innerText = '🌱'
         } else if(adjacentPlants['🌲'] >= 2 && adjacentPlants['🍏'] >= 2 && adjacentPlants['🍎'] >= 2 && Math.random() < 0.05) {
@@ -605,7 +605,7 @@ function tick() {
                 stage: 0,
                 maxStage: 25,
                 natural: true,
-                multiplier: 2.5
+                multiplier: 3
             }
             ref.innerText = '🌱'
         } else if(adjacentPlants['🌿'] >= 4 && adjacentPlants['🍒'] >= 4 && Math.random() < 0.4) {
@@ -614,7 +614,7 @@ function tick() {
                 stage: 0,
                 maxStage: 8,
                 natural: true,
-                multiplier: 1.5
+                multiplier: 3
             }
             ref.innerText = '🌱'
         } else if(adjacentPlants['🍍'] >= 2 && adjacentPlants['🍏'] >= 2 && Math.random() < 0.15) {
@@ -623,7 +623,7 @@ function tick() {
                 stage: 0,
                 maxStage: 15,
                 natural: true,
-                multiplier: 2.5
+                multiplier: 2
             }
             ref.innerText = '🌱'
         } else if(adjacentPlants['🍎'] >= 3 && adjacentPlants['🍏'] >= 3 && Math.random() < 0.15) {
@@ -632,7 +632,7 @@ function tick() {
                 stage: 0,
                 maxStage: 15,
                 natural: true,
-                multiplier: 2
+                multiplier: 3
             }
             ref.innerText = '🌱'
         } else if(adjacentPlants['🍑'] >= 4 && adjacentPlants['🥭'] >= 2 && Math.random() < 0.15) {
@@ -659,7 +659,7 @@ function tick() {
                 stage: 0,
                 maxStage: 15,
                 natural: true,
-                multiplier: 2
+                multiplier: 1.5
             }
             ref.innerText = '🌱'
         } else if(adjacentPlants['🪷'] >= 4 && Math.random() < 0.2) {
@@ -677,7 +677,7 @@ function tick() {
                 stage: 0,
                 maxStage: 25,
                 natural: true,
-                multiplier: 2
+                multiplier: 4
             }
             ref.innerText = '🌱'
         } else if(adjacentPlants['🫐'] >= 3 && adjacentPlants['🍒'] >= 3 && Math.random() < 0.2) {
@@ -695,7 +695,7 @@ function tick() {
                 stage: 0,
                 maxStage: 25,
                 natural: true,
-                multiplier: 2
+                multiplier: 1.5
             }
             ref.innerText = '🌱'
         } else if(adjacentPlants['🍊'] >= 4 && Math.random() < 0.1) {
@@ -713,7 +713,7 @@ function tick() {
                 stage: 0,
                 maxStage: 40,
                 natural: true,
-                multiplier: 2.5
+                multiplier: 3.75
             }
             ref.innerText = '🌱'
         } else if(adjacentPlants['🌳'] >= 2 && adjacentPlants['🍋'] >= 2 && adjacentPlants['🍊'] >= 2 && Math.random() < 0.05) {
@@ -722,7 +722,7 @@ function tick() {
                 stage: 0,
                 maxStage: 25,
                 natural: true,
-                multiplier: 2.5
+                multiplier: 3
             }
             ref.innerText = '🌱'
         } else if(adjacentPlants['🌴'] >= 3 && adjacentPlants.sprout >= 3 && Math.random() < 0.1) {
@@ -731,7 +731,7 @@ function tick() {
                 stage: 0,
                 maxStage: 25,
                 natural: true,
-                multiplier: 2
+                multiplier: 3
             }
             ref.innerText = '🌱'
         } else if(adjacentPlants['🍌'] >= 4 && adjacentPlants['🍏'] >= 4 && Math.random() < 0.1) {
@@ -740,7 +740,7 @@ function tick() {
                 stage: 0,
                 maxStage: 25,
                 natural: true,
-                multiplier: 2
+                multiplier: 4
             }
             ref.innerText = '🌱'
         } else if(adjacentPlants['🍇'] >= 2 && adjacentPlants.sprout >= 4 && Math.random() < 0.05) {
@@ -749,7 +749,7 @@ function tick() {
                 stage: 0,
                 maxStage: 25,
                 natural: true,
-                multiplier: 2.5
+                multiplier: 4
             }
             ref.innerText = '🌱'
         } else if(adjacentPlants['🪻'] >= 2 && adjacentPlants['🍋'] >= 4 && Math.random() < 0.05) {
@@ -758,7 +758,7 @@ function tick() {
                 stage: 0,
                 maxStage: 25,
                 natural: true,
-                multiplier: 2.5
+                multiplier: 3
             }
             ref.innerText = '🌱'
         } else if(adjacentPlants['🍈'] >= 4 && adjacentPlants['🍓'] >= 4 && Math.random() < 0.05) {
@@ -767,7 +767,7 @@ function tick() {
                 stage: 0,
                 maxStage: 40,
                 natural: true,
-                multiplier: 2.5
+                multiplier: 5
             }
             ref.innerText = '🌱'
         } else if(adjacentPlants['🌺'] >= 8 && Math.random() < 0.05 && new Date().getHours() >= 8 && new Date().getHours() <= 12) {
@@ -776,7 +776,7 @@ function tick() {
                 stage: 0,
                 maxStage: 25,
                 natural: true,
-                multiplier: 3
+                multiplier: 6
             }
             ref.innerText = '🌱'
         } else if(adjacentPlants['🪷'] >= 8 && Math.random() < 0.02 && (new Date().getHours() < 6 || new Date().getHours() >= 22)) {
@@ -785,7 +785,7 @@ function tick() {
                 stage: 0,
                 maxStage: 40,
                 natural: true,
-                multiplier: 3
+                multiplier: 7.5
             }
             ref.innerText = '🌱'
         } else if(adjacentPlants['🌻'] >= 2 && adjacentPlants['🌿'] >= 2 && adjacentPlants['☘️'] >= 2 && adjacentPlants['🌳'] >= 2 && Math.random() < 0.05) {
@@ -794,7 +794,7 @@ function tick() {
                 stage: 0,
                 maxStage: 40,
                 natural: true,
-                multiplier: 2.5
+                multiplier: 5
             }
             ref.innerText = '🌱'
         } else if(adjacentPlants['🌾'] >= 8 && Math.random() < 0.02) {
@@ -803,7 +803,7 @@ function tick() {
                 stage: 0,
                 maxStage: 40,
                 natural: true,
-                multiplier: 2.5
+                multiplier: 4
             }
             ref.innerText = '🌱'
         } else if(adjacentPlants['🌽'] >= 2 && adjacentPlants['🍐'] >= 2 && Math.random() < 0.02) {
@@ -866,7 +866,7 @@ function tick() {
                 stage: 0,
                 maxStage: 65,
                 natural: true,
-                multiplier: 3
+                multiplier: 5
             }
             ref.innerText = '🌱'
         }
@@ -894,13 +894,13 @@ function tick() {
             }  
         }
 
-        if(adjacentPlants.sprout == 20 && Math.random() < 0.01) {
+        if(adjacentPlants.sprout >= 4 && adjacentPlants['🥒'] >= 12 && Math.random() < 0.01) {
             board[y][x].plant = {
                 type: '🌵',
                 stage: 0,
                 maxStage: 65,
                 natural: true,
-                multiplier: 5
+                multiplier: 11
             }
             ref.innerText = '🌱'
         } else if(adjacentPlants['🌴'] >= 12 && adjacentPlants['🍈'] >= 8 && Math.random() < 0.01) {
@@ -909,16 +909,16 @@ function tick() {
                 stage: 0,
                 maxStage: 65,
                 natural: true,
-                multiplier: 4
+                multiplier: 10
             }
             ref.innerText = '🌱'
-        } else if(adjacentPlants['🥕'] >= 16 && adjacentPlants['🥥'] >= 4 && Math.random() < 0.01) {
+        } else if(adjacentPlants['🥕'] >= 8 && adjacentPlants['🥔'] >= 8 && adjacentPlants['🥥'] >= 4 && Math.random() < 0.01) {
             board[y][x].plant = {
                 type: '🧄',
                 stage: 0,
                 maxStage: 65,
                 natural: true,
-                multiplier: 4
+                multiplier: 10
             }
             ref.innerText = '🌱'
         } else if(adjacentPlants['🧄'] >= 8 && adjacentPlants['🍋'] >= 12 && Math.random() < 0.01) {
@@ -927,16 +927,16 @@ function tick() {
                 stage: 0,
                 maxStage: 65,
                 natural: true,
-                multiplier: 4
+                multiplier: 10
             }
             ref.innerText = '🌱'
-        } else if(adjacentPlants['🍋‍🟩'] >= 8 && adjacentPlants['🌵'] >= 8 && adjacentPlants['🥥'] >= 4 && Math.random() < 0.01) {
+        } else if(adjacentPlants['🍋‍🟩'] >= 12 && adjacentPlants['🌵'] >= 4 && adjacentPlants['🥥'] >= 4 && Math.random() < 0.01) {
             board[y][x].plant = {
                 type: '🥝',
                 stage: 0,
                 maxStage: 65,
                 natural: true,
-                multiplier: 4
+                multiplier: 10
             }
             ref.innerText = '🌱'
         } else if(adjacentPlants['🧅'] >= 4 && adjacentPlants['🥝'] >= 12 && adjacentPlants['🍀'] >= 4 && Math.random() < 0.01) {
@@ -945,7 +945,7 @@ function tick() {
                 stage: 0,
                 maxStage: 65,
                 natural: true,
-                multiplier: 4
+                multiplier: 12
             }
             ref.innerText = '🌱'
         } else if(adjacentPlants['🌷'] >= 2 && adjacentPlants['🌹'] >= 2 && adjacentPlants['🌺'] >= 2 && adjacentPlants['🥀'] >= 2 && adjacentPlants['🌸'] >= 2 && adjacentPlants['🪷'] >= 2 && adjacentPlants['🪻'] >= 2 && adjacentPlants['🌻'] >= 2 && Math.random() < 0.01) {
@@ -954,7 +954,7 @@ function tick() {
                 stage: 0,
                 maxStage: 100,
                 natural: true,
-                multiplier: 3
+                multiplier: 10
             }
             ref.innerText = '🌱'
         }
