@@ -19,8 +19,17 @@
         <div id="plantinfo">
 
         </div>
-        <div id="inventorydisplay" class="button dark" onclick="nextPlant()" ondblclick="switchInventory()" onauxclick="prevPlant()">
-            0x 🌷
+        <div style="display:flex;">
+            <div id="inventorydisplay" class="button dark" onclick="nextPlant()" ondblclick="switchInventory()" onauxclick="prevPlant()">
+                0x 🌷
+            </div>
+            <div id="inventoryexpander" class="tile light" onclick="expandInventory()">
+                ▼
+            </div>
+        </div>
+        <br>
+        <div id="expandedInventoryDisplay">
+
         </div>
         <script src="script.js"></script>
     </body>

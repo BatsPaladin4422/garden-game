@@ -11,6 +11,7 @@ let selectedTile;
 let selectedPlant = 0;
 let selectedItem = 0
 let isInItemInventory = false
+let expandedInventory = false
 let tileLength;
 
 console.log(`${new Date().getHours() >= 8 && new Date().getHours() <= 12}`)
@@ -401,6 +402,161 @@ function getPlantByID(id) {
     }
 }
 
+function getReqsByID(id) {
+    switch(id) {
+        case 0: {
+            return `None`
+        }
+        case 1: {
+            return `4x 🌷`;
+        }
+        case 2: {
+            return `8x ${inventory[`🌹`] ? "🌹" : "???"}`;
+        }
+        case 3: {
+            return `4x 🌷, 4x 🌱`;
+        }
+        case 4: {
+            return `4x 🌱`;
+        }
+        case 5: {
+            return `8x ${inventory[`🌿`] ? "🌿" : "???"}`;
+        }
+        case 6: {
+            return `8x ${inventory[`🌿`] ? "🌿" : "???"}`;
+        }
+        case 7: {
+            return `2x ${inventory['🌺'] ? "🌺" : "???"}, 2x ${inventory['🥀'] ? "🥀" : "???"}, 2x ${inventory['☘️'] ? "☘️" : "???"}️`;
+        }
+        case 8: {
+            return `4x ${inventory['🌸'] ? "🌸" : "???"}`;
+        }
+        case 9: {
+            return `8x ${inventory['☘️'] ? "☘️" : "???"}️`;
+        }
+        case 10: {
+            return `1x ${inventory['🥦'] ? "🥦" : "???"}`;
+        }
+        case 11: {
+            return `4x ${inventory['🍒'] ? "🍒" : "???"}, 4x ${inventory['🌸'] ? "🌸" : "???"}`;
+        }
+        case 12: {
+            return `4x ${inventory['🥦'] ? "🥦" : "???"}, 4x ${inventory['🌸'] ? "🌸" : "???"}`;
+        }
+        case 13: {
+            return `3x ${inventory['🥬'] ? "🥬" : "???"}, 3x ${inventory['🌿'] ? "🌿" : "???"}`;
+        }
+        case 14: {
+            return `2x ${inventory['🌲'] ? "🌲" : "???"}, 2x ${inventory['🍏'] ? "🍏" : "???"}, 2x ${inventory['🍎'] ? "🍎" : "???"}`;
+        }
+        case 15: {
+            return `4x ${inventory['🍒'] ? "🍒" : "???"}, 4x ${inventory['🌿'] ? "🌿" : "???"}`;
+        }
+        case 16: {
+            return `2x ${inventory['🍍'] ? "🍍" : "???"}, 2x ${inventory['🍏'] ? "🍏" : "???"}`;
+        }
+        case 17: {
+            return `3x ${inventory['🍏'] ? "🍏" : "???"}, 3x ${inventory['🍎'] ? "🍎" : "???"}`;
+        }
+        case 18: {
+            return `4x ${inventory['🍑'] ? "🍑" : "???"}, 2x ${inventory['🥭'] ? "🥭" : "???"}`;
+        }
+        case 19: {
+            return `3x ${inventory['🥭'] ? "🥭" : "???"}/${inventory['🫐'] ? "🫐" : "???"}, 3x ${inventory['🍒'] ? "🍒" : "???"}`;
+        }
+        case 20: {
+            return `1x ${inventory['🍀'] ? "🍀" : "???"}, 4x ${inventory['🥀'] ? "🥀" : "???"}`;
+        }
+        case 21: {
+            return `4x ${inventory['🪷'] ? "🪷" : "???"}`;
+        }
+        case 22: {
+            return `4x ${inventory['🪻'] ? "🪻" : "???"}, 4x ${inventory['🍒'] ? "🍒" : "???"}`;
+        }
+        case 23: {
+            return `3x ${inventory['🍅'] ? "🍅" : "???"}`;
+        }
+        case 24: {
+            return `4x ${inventory['🍊'] ? "🍊" : "???"}`;
+        }
+        case 25: {
+            return `2x ${inventory['🌿'] ? "🌿" : "???"}, 2x ${inventory['🌲'] ? "🌲" : "???"}, 4x 🌱`;
+        }
+        case 26: {
+            return `2x ${inventory['🌳'] ? "🌳" : "???"}, 2x ${inventory['🍋'] ? "🍋" : "???"}, 2x ${inventory['🍊'] ? "🍊" : "???"}`;
+        }
+        case 27: {
+            return `3x ${inventory['🌴'] ? "🌴" : "???"}, 3x 🌱`;
+        }
+        case 28: {
+            return `4x ${inventory['🍌'] ? "🍌" : "???"}, 4x ${inventory['🍏'] ? "🍏" : "???"}`;
+        }
+        case 29: {
+            return `2x ${inventory['🍇'] ? "🍇" : "???"}, 4x 🌱`;
+        }
+        case 30: {
+            return `2x ${inventory['🪻'] ? "🪻" : "???"}, 4x ${inventory['🍋'] ? "🍋" : "???"}`;
+        }
+        case 31: {
+            return `4x ${inventory['🍈'] ? "🍈" : "???"}, 4x ${inventory['🍓'] ? "🍓" : "???"}`;
+        }
+        case 32: {
+            return `8x ${inventory['🌺'] ? "🌺" : "???"}, Only in the morning`;
+        }
+        case 33: {
+            return `8x ${inventory['🪷'] ? "🪷" : "???"}, Only at night`;
+        }
+        case 34: {
+            return `2x ${inventory['🌻'] ? "🌻" : "???"}, 2x ${inventory['🌿'] ? "🌿" : "???"}, 2x ${inventory['☘️'] ? "☘️" : "???"}️, 2x ${inventory['🌳'] ? "🌳" : "???"}`;
+        }
+        case 35: {
+            return `8x ${inventory['🌾'] ? "🌾" : "???"}`;
+        }
+        case 36: {
+            return `2x ${inventory['🍐'] ? "🍐" : "???"}, 2x ${inventory['🌽'] ? "🌽" : "???"}`;
+        }
+        case 37: {
+            return `2x ${inventory['🥑'] ? "🥑" : "???"}, 4x ${inventory['🌿'] ? "🌿" : "???"}, 2x 🌱`;
+        }
+        case 38: {
+            return `2x ${inventory['🥒'] ? "🥒" : "???"}, 2x ${inventory['🌶'] ? "🌶" : "???"}️`;
+        }
+        case 39: {
+            return `2x ${inventory['🥑'] ? "🥑" : "???"}, 2x ${inventory['🍋'] ? "🍋" : "???"}`;
+        }
+        case 40: {
+            return `2x ${inventory['🪻'] ? "🪻" : "???"}, 2x ${inventory['🥒'] ? "🥒" : "???"}, 2x ${inventory['🍄'] ? "🍄" : "???"}`;
+        }
+        case 41: {
+            return `2x ${inventory['🍉'] ? "🍉" : "???"}, 2x ${inventory['🥑'] ? "🥑" : "???"}, 2x ${inventory['🫑'] ? "🫑" : "???"}`;
+        }
+        case 42: {
+            return `3x ${inventory['🥔'] ? "🥔" : "???"}, 2x ${inventory['🍆'] ? "🍆" : "???"}, 3x 🌱`;
+        }
+        case 43: {
+            return `12x ${inventory['🥒'] ? "🥒" : "???"}, 4x 🌱`;
+        }
+        case 44: {
+            return `12x ${inventory['🌴'] ? "🌴" : "???"}, 8x ${inventory['🍈'] ? "🍈" : "???"}`;
+        }
+        case 45: {
+            return `8x ${inventory['🥕'] ? "🥕" : "???"}, 8x ${inventory['🥔'] ? "🥔" : "???"}, 4x ${inventory['🥥'] ? "🥥" : "???"}`;
+        }
+        case 46: {
+            return `12x ${inventory['🍋'] ? "🍋" : "???"}, 8x ${inventory['🧄'] ? "🧄" : "???"}`;
+        }
+        case 47: {
+            return `12x ${inventory['🍋'] ? "🍋" : "???"}‍, 4x ${inventory['🌵'] ? "🌵" : "???"}, 4x ${inventory['🥥'] ? "🥥" : "???"}`;
+        }
+        case 48: {
+            return `4x ${inventory['🧅'] ? "🧅" : "???"}, 12x ${inventory['🥝'] ? "🥝" : "???"}, 4x ${inventory['🍀'] ? "🍀" : "???"}`;
+        }
+        case 49: {
+            return `2x ${inventory['🌷'] ? "🌷" : "???"}, 2x ${inventory['🌹'] ? "🌹" : "???"}, 2x ${inventory['🌺'] ? "🌺" : "???"}, 2x ${inventory['🥀'] ? "🥀" : "???"}, 2x ${inventory['🌸'] ? "🌸" : "???"}, 2x ${inventory['🪷'] ? "🪷" : "???"}, 2x ${inventory['🪻'] ? "🪻" : "???"}, 2x ${inventory['🌻'] ? "🌻" : "???"}`;
+        }
+    }
+}
+
 function getItemByID(id) {
     switch(id) {
         case 0: {
@@ -410,6 +566,52 @@ function getItemByID(id) {
             return '⇪';
         }
     }
+}
+
+function expandInventory() {
+    if(!expandedInventory) {
+        inventoryexpander.innerText = "▲"
+        const nestedExpandedInventoryDisplay = document.createElement("div")
+        nestedExpandedInventoryDisplay.id = "neid"
+        for (let y = 0; y < 5; y++) {
+            const row = document.createElement("div")
+            row.style.display = 'flex';
+            for (let x = 0; x < 10; x++) {
+                const button = document.createElement("button")
+                button.className = (x + y) & 1 === 1 ? "inventory dark" : "inventory light"
+                let id = 10 * y + x
+                let plant = getPlantByID(id)
+                if(inventory[plant]) {
+                    buttonPlantCount = inventory[plant]
+                    button.innerText = `${buttonPlantCount}x ${plant}`
+                    button.onclick = (() => {
+                        selectedPlant = id
+                        selectedPlantCount = inventory[plant]
+                        expandInventory()
+                        showInventory()
+                    })
+                } else {
+                    button.innerText = "???"
+                }
+
+                button.innerText += `\n (${getReqsByID(id)})`
+
+                row.appendChild(button)
+            }
+            nestedExpandedInventoryDisplay.appendChild(row)
+        }
+        expandedInventoryDisplay.appendChild(nestedExpandedInventoryDisplay)
+    } else {
+        inventoryexpander.innerText = "▼"
+        document.getElementById("neid").remove()
+    }
+    expandedInventory = !expandedInventory
+}
+
+function select(plant) {
+    selectedPlant = plant;
+    isInItemInventory = false
+    showInventory()
 }
 
 function tick() {

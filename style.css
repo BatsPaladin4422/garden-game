@@ -1,8 +1,18 @@
 .tile {
+    text-align: center;
     width: 8vh;
     height: 8vh;
     border: none;
     font-size: 5vh;
+}
+
+.inventory {
+    font-size: 1.5vh;
+    color: white;
+    text-align: center;
+    width: 16vh;
+    height: 10vh;
+    border: none;
 }
 
 .button {
@@ -32,6 +42,7 @@
 }
 
 body {
+    font-size: 1.5vh;
     background-color: #1f1f1f;
     margin: 0;
     width: 100vw;
