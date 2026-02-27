@@ -578,7 +578,7 @@ function expandInventory() {
             row.style.display = 'flex';
             for (let x = 0; x < 10; x++) {
                 const button = document.createElement("button")
-                button.className = (x + y) & 1 === 1 ? "inventory dark" : "inventory light"
+                button.className = (x + y) & 1 === 1 ? "inventory dark2" : "inventory light2"
                 let id = 10 * y + x
                 let plant = getPlantByID(id)
                 if(inventory[plant]) {
