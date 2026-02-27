@@ -426,133 +426,133 @@ function getReqsByID(id) {
             return `8x ${inventory[`🌿`] ? "🌿" : "???"}`;
         }
         case 7: {
-            return `2x ${inventory['🌺'] ? "🌺" : "???"}, 2x ${inventory['🥀'] ? "🥀" : "???"}, 2x ${inventory['☘️'] ? "☘️" : "???"}️`;
+            return `2x ${inventory['🌺'] >= 0 ? "🌺" : "???"}, 2x ${inventory['🥀'] >= 0 ? "🥀" : "???"}, 2x ${inventory['☘️'] ? "☘️" : "???"}️`;
         }
         case 8: {
-            return `4x ${inventory['🌸'] ? "🌸" : "???"}`;
+            return `4x ${inventory['🌸'] >= 0 ? "🌸" : "???"}`;
         }
         case 9: {
             return `8x ${inventory['☘️'] ? "☘️" : "???"}️`;
         }
         case 10: {
-            return `1x ${inventory['🥦'] ? "🥦" : "???"}`;
+            return `1x ${inventory['🥦'] >= 0 ? "🥦" : "???"}`;
         }
         case 11: {
-            return `4x ${inventory['🍒'] ? "🍒" : "???"}, 4x ${inventory['🌸'] ? "🌸" : "???"}`;
+            return `4x ${inventory['🍒'] >= 0 ? "🍒" : "???"}, 4x ${inventory['🌸'] >= 0 ? "🌸" : "???"}`;
         }
         case 12: {
-            return `4x ${inventory['🥦'] ? "🥦" : "???"}, 4x ${inventory['🌸'] ? "🌸" : "???"}`;
+            return `4x ${inventory['🥦'] >= 0 ? "🥦" : "???"}, 4x ${inventory['🌸'] >= 0 ? "🌸" : "???"}`;
         }
         case 13: {
-            return `3x ${inventory['🥬'] ? "🥬" : "???"}, 3x ${inventory['🌿'] ? "🌿" : "???"}`;
+            return `3x ${inventory['🥬'] >= 0 ? "🥬" : "???"}, 3x ${inventory['🌿'] >= 0 ? "🌿" : "???"}`;
         }
         case 14: {
-            return `2x ${inventory['🌲'] ? "🌲" : "???"}, 2x ${inventory['🍏'] ? "🍏" : "???"}, 2x ${inventory['🍎'] ? "🍎" : "???"}`;
+            return `2x ${inventory['🌲'] >= 0 ? "🌲" : "???"}, 2x ${inventory['🍏'] >= 0 ? "🍏" : "???"}, 2x ${inventory['🍎'] >= 0 ? "🍎" : "???"}`;
         }
         case 15: {
-            return `4x ${inventory['🍒'] ? "🍒" : "???"}, 4x ${inventory['🌿'] ? "🌿" : "???"}`;
+            return `4x ${inventory['🍒'] >= 0 ? "🍒" : "???"}, 4x ${inventory['🌿'] >= 0 ? "🌿" : "???"}`;
         }
         case 16: {
-            return `2x ${inventory['🍍'] ? "🍍" : "???"}, 2x ${inventory['🍏'] ? "🍏" : "???"}`;
+            return `2x ${inventory['🍍'] >= 0 ? "🍍" : "???"}, 2x ${inventory['🍏'] >= 0 ? "🍏" : "???"}`;
         }
         case 17: {
-            return `3x ${inventory['🍏'] ? "🍏" : "???"}, 3x ${inventory['🍎'] ? "🍎" : "???"}`;
+            return `3x ${inventory['🍏'] >= 0 ? "🍏" : "???"}, 3x ${inventory['🍎'] >= 0 ? "🍎" : "???"}`;
         }
         case 18: {
-            return `4x ${inventory['🍑'] ? "🍑" : "???"}, 2x ${inventory['🥭'] ? "🥭" : "???"}`;
+            return `4x ${inventory['🍑'] >= 0 ? "🍑" : "???"}, 2x ${inventory['🥭'] >= 0 ? "🥭" : "???"}`;
         }
         case 19: {
-            return `3x ${inventory['🥭'] ? "🥭" : "???"}/${inventory['🫐'] ? "🫐" : "???"}, 3x ${inventory['🍒'] ? "🍒" : "???"}`;
+            return `3x ${inventory['🥭'] >= 0 ? "🥭" : "???"}/${inventory['🫐'] >= 0 ? "🫐" : "???"}, 3x ${inventory['🍒'] >= 0 ? "🍒" : "???"}`;
         }
         case 20: {
-            return `1x ${inventory['🍀'] ? "🍀" : "???"}, 4x ${inventory['🥀'] ? "🥀" : "???"}`;
+            return `1x ${inventory['🍀'] >= 0 ? "🍀" : "???"}, 4x ${inventory['🥀'] >= 0 ? "🥀" : "???"}`;
         }
         case 21: {
-            return `4x ${inventory['🪷'] ? "🪷" : "???"}`;
+            return `4x ${inventory['🪷'] >= 0 ? "🪷" : "???"}`;
         }
         case 22: {
-            return `4x ${inventory['🪻'] ? "🪻" : "???"}, 4x ${inventory['🍒'] ? "🍒" : "???"}`;
+            return `4x ${inventory['🪻'] >= 0 ? "🪻" : "???"}, 4x ${inventory['🍒'] >= 0 ? "🍒" : "???"}`;
         }
         case 23: {
-            return `3x ${inventory['🍅'] ? "🍅" : "???"}`;
+            return `3x ${inventory['🍅'] >= 0 ? "🍅" : "???"}`;
         }
         case 24: {
-            return `4x ${inventory['🍊'] ? "🍊" : "???"}`;
+            return `4x ${inventory['🍊'] >= 0 ? "🍊" : "???"}`;
         }
         case 25: {
-            return `2x ${inventory['🌿'] ? "🌿" : "???"}, 2x ${inventory['🌲'] ? "🌲" : "???"}, 4x 🌱`;
+            return `2x ${inventory['🌿'] >= 0 ? "🌿" : "???"}, 2x ${inventory['🌲'] >= 0 ? "🌲" : "???"}, 4x 🌱`;
         }
         case 26: {
-            return `2x ${inventory['🌳'] ? "🌳" : "???"}, 2x ${inventory['🍋'] ? "🍋" : "???"}, 2x ${inventory['🍊'] ? "🍊" : "???"}`;
+            return `2x ${inventory['🌳'] >= 0 ? "🌳" : "???"}, 2x ${inventory['🍋'] >= 0 ? "🍋" : "???"}, 2x ${inventory['🍊'] >= 0 ? "🍊" : "???"}`;
         }
         case 27: {
-            return `3x ${inventory['🌴'] ? "🌴" : "???"}, 3x 🌱`;
+            return `3x ${inventory['🌴'] >= 0 ? "🌴" : "???"}, 3x 🌱`;
         }
         case 28: {
-            return `4x ${inventory['🍌'] ? "🍌" : "???"}, 4x ${inventory['🍏'] ? "🍏" : "???"}`;
+            return `4x ${inventory['🍌'] >= 0 ? "🍌" : "???"}, 4x ${inventory['🍏'] >= 0 ? "🍏" : "???"}`;
         }
         case 29: {
-            return `2x ${inventory['🍇'] ? "🍇" : "???"}, 4x 🌱`;
+            return `2x ${inventory['🍇'] >= 0 ? "🍇" : "???"}, 4x 🌱`;
         }
         case 30: {
-            return `2x ${inventory['🪻'] ? "🪻" : "???"}, 4x ${inventory['🍋'] ? "🍋" : "???"}`;
+            return `2x ${inventory['🪻'] >= 0 ? "🪻" : "???"}, 4x ${inventory['🍋'] >= 0 ? "🍋" : "???"}`;
         }
         case 31: {
-            return `4x ${inventory['🍈'] ? "🍈" : "???"}, 4x ${inventory['🍓'] ? "🍓" : "???"}`;
+            return `4x ${inventory['🍈'] >= 0 ? "🍈" : "???"}, 4x ${inventory['🍓'] >= 0 ? "🍓" : "???"}`;
         }
         case 32: {
-            return `8x ${inventory['🌺'] ? "🌺" : "???"}, Only in the morning`;
+            return `8x ${inventory['🌺'] >= 0 ? "🌺" : "???"}, Only in the morning`;
         }
         case 33: {
-            return `8x ${inventory['🪷'] ? "🪷" : "???"}, Only at night`;
+            return `8x ${inventory['🪷'] >= 0 ? "🪷" : "???"}, Only at night`;
         }
         case 34: {
-            return `2x ${inventory['🌻'] ? "🌻" : "???"}, 2x ${inventory['🌿'] ? "🌿" : "???"}, 2x ${inventory['☘️'] ? "☘️" : "???"}️, 2x ${inventory['🌳'] ? "🌳" : "???"}`;
+            return `2x ${inventory['🌻'] >= 0 ? "🌻" : "???"}, 2x ${inventory['🌿'] >= 0 ? "🌿" : "???"}, 2x ${inventory['☘️'] ? "☘️" : "???"}️, 2x ${inventory['🌳'] >= 0 ? "🌳" : "???"}`;
         }
         case 35: {
-            return `8x ${inventory['🌾'] ? "🌾" : "???"}`;
+            return `8x ${inventory['🌾'] >= 0 ? "🌾" : "???"}`;
         }
         case 36: {
-            return `2x ${inventory['🍐'] ? "🍐" : "???"}, 2x ${inventory['🌽'] ? "🌽" : "???"}`;
+            return `2x ${inventory['🍐'] >= 0 ? "🍐" : "???"}, 2x ${inventory['🌽'] >= 0 ? "🌽" : "???"}`;
         }
         case 37: {
-            return `2x ${inventory['🥑'] ? "🥑" : "???"}, 4x ${inventory['🌿'] ? "🌿" : "???"}, 2x 🌱`;
+            return `2x ${inventory['🥑'] >= 0 ? "🥑" : "???"}, 4x ${inventory['🌿'] >= 0 ? "🌿" : "???"}, 2x 🌱`;
         }
         case 38: {
-            return `2x ${inventory['🥒'] ? "🥒" : "???"}, 2x ${inventory['🌶'] ? "🌶" : "???"}️`;
+            return `2x ${inventory['🥒'] >= 0 ? "🥒" : "???"}, 2x ${inventory['🌶'] >= 0 ? "🌶" : "???"}️`;
         }
         case 39: {
-            return `2x ${inventory['🥑'] ? "🥑" : "???"}, 2x ${inventory['🍋'] ? "🍋" : "???"}`;
+            return `2x ${inventory['🥑'] >= 0 ? "🥑" : "???"}, 2x ${inventory['🍋'] >= 0 ? "🍋" : "???"}`;
         }
         case 40: {
-            return `2x ${inventory['🪻'] ? "🪻" : "???"}, 2x ${inventory['🥒'] ? "🥒" : "???"}, 2x ${inventory['🍄'] ? "🍄" : "???"}`;
+            return `2x ${inventory['🪻'] >= 0 ? "🪻" : "???"}, 2x ${inventory['🥒'] >= 0 ? "🥒" : "???"}, 2x ${inventory['🍄'] >= 0 ? "🍄" : "???"}`;
         }
         case 41: {
-            return `2x ${inventory['🍉'] ? "🍉" : "???"}, 2x ${inventory['🥑'] ? "🥑" : "???"}, 2x ${inventory['🫑'] ? "🫑" : "???"}`;
+            return `2x ${inventory['🍉'] >= 0 ? "🍉" : "???"}, 2x ${inventory['🥑'] >= 0 ? "🥑" : "???"}, 2x ${inventory['🫑'] >= 0 ? "🫑" : "???"}`;
         }
         case 42: {
-            return `3x ${inventory['🥔'] ? "🥔" : "???"}, 2x ${inventory['🍆'] ? "🍆" : "???"}, 3x 🌱`;
+            return `3x ${inventory['🥔'] >= 0 ? "🥔" : "???"}, 2x ${inventory['🍆'] >= 0 ? "🍆" : "???"}, 3x 🌱`;
         }
         case 43: {
-            return `12x ${inventory['🥒'] ? "🥒" : "???"}, 4x 🌱`;
+            return `12x ${inventory['🥒'] >= 0 ? "🥒" : "???"}, 4x 🌱`;
         }
         case 44: {
-            return `12x ${inventory['🌴'] ? "🌴" : "???"}, 8x ${inventory['🍈'] ? "🍈" : "???"}`;
+            return `12x ${inventory['🌴'] >= 0 ? "🌴" : "???"}, 8x ${inventory['🍈'] >= 0 ? "🍈" : "???"}`;
         }
         case 45: {
-            return `8x ${inventory['🥕'] ? "🥕" : "???"}, 8x ${inventory['🥔'] ? "🥔" : "???"}, 4x ${inventory['🥥'] ? "🥥" : "???"}`;
+            return `8x ${inventory['🥕'] >= 0 ? "🥕" : "???"}, 8x ${inventory['🥔'] >= 0 ? "🥔" : "???"}, 4x ${inventory['🥥'] >= 0 ? "🥥" : "???"}`;
         }
         case 46: {
-            return `12x ${inventory['🍋'] ? "🍋" : "???"}, 8x ${inventory['🧄'] ? "🧄" : "???"}`;
+            return `12x ${inventory['🍋'] >= 0 ? "🍋" : "???"}, 8x ${inventory['🧄'] >= 0 ? "🧄" : "???"}`;
         }
         case 47: {
-            return `12x ${inventory['🍋'] ? "🍋" : "???"}‍, 4x ${inventory['🌵'] ? "🌵" : "???"}, 4x ${inventory['🥥'] ? "🥥" : "???"}`;
+            return `12x ${inventory['🍋‍🟩'] ? "🍋‍🟩" : "???"}‍, 4x ${inventory['🌵'] >= 0 ? "🌵" : "???"}, 4x ${inventory['🥥'] >= 0 ? "🥥" : "???"}`;
         }
         case 48: {
-            return `4x ${inventory['🧅'] ? "🧅" : "???"}, 12x ${inventory['🥝'] ? "🥝" : "???"}, 4x ${inventory['🍀'] ? "🍀" : "???"}`;
+            return `4x ${inventory['🧅'] >= 0 ? "🧅" : "???"}, 12x ${inventory['🥝'] >= 0 ? "🥝" : "???"}, 4x ${inventory['🍀'] >= 0 ? "🍀" : "???"}`;
         }
         case 49: {
-            return `2x ${inventory['🌷'] ? "🌷" : "???"}, 2x ${inventory['🌹'] ? "🌹" : "???"}, 2x ${inventory['🌺'] ? "🌺" : "???"}, 2x ${inventory['🥀'] ? "🥀" : "???"}, 2x ${inventory['🌸'] ? "🌸" : "???"}, 2x ${inventory['🪷'] ? "🪷" : "???"}, 2x ${inventory['🪻'] ? "🪻" : "???"}, 2x ${inventory['🌻'] ? "🌻" : "???"}`;
+            return `2x ${inventory['🌷'] >= 0 ? "🌷" : "???"}, 2x ${inventory['🌹'] >= 0 ? "🌹" : "???"}, 2x ${inventory['🌺'] >= 0 ? "🌺" : "???"}, 2x ${inventory['🥀'] >= 0 ? "🥀" : "???"}, 2x ${inventory['🌸'] >= 0 ? "🌸" : "???"}, 2x ${inventory['🪷'] >= 0 ? "🪷" : "???"}, 2x ${inventory['🪻'] >= 0 ? "🪻" : "???"}, 2x ${inventory['🌻'] >= 0 ? "🌻" : "???"}`;
         }
     }
 }
@@ -578,10 +578,10 @@ function expandInventory() {
             row.style.display = 'flex';
             for (let x = 0; x < 10; x++) {
                 const button = document.createElement("button")
-                button.className = (x + y) & 1 === 1 ? "inventory dark2" : "inventory light2"
                 let id = 10 * y + x
                 let plant = getPlantByID(id)
-                if(inventory[plant]) {
+                if(inventory[plant] >= 0) {
+                    button.className = (x + y) & 1 === 1 ? "inventory dark2" : "inventory light2"
                     buttonPlantCount = inventory[plant]
                     button.innerText = `${buttonPlantCount}x ${plant}`
                     button.onclick = (() => {
@@ -591,6 +591,7 @@ function expandInventory() {
                         showInventory()
                     })
                 } else {
+                    button.className = (x + y) & 1 === 1 ? "inventory dark3" : "inventory light3"
                     button.innerText = "???"
                 }
 

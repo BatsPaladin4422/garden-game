@@ -38,6 +38,14 @@
     background-color: #708090;
 }
 
+.dark3 {
+    background-color: #383838;
+}
+
+.light3 {
+    background-color: #707070;
+}
+
 .selected {
     background-color: #ffffff;
 }
